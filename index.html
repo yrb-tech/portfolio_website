@@ -1,98 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuv Raj Bhattarai | Business Analyst</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yuv Raj Bhattarai — Business Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<header>
-  <nav>
-    <h2 class="logo">Yuv Raj</h2>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">YRB</div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-text="About">About</a></li>
+      <li><a href="#experience" data-text="Experience">Experience</a></li>
+      <li><a href="#skills" data-text="Skills">Skills</a></li>
+      <li><a href="#projects" data-text="Projects">Projects</a></li>
+      <li><a href="#contact" data-text="Contact">Contact</a></li>
     </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-</header>
 
-<section class="hero">
-  <h1>Hello, I'm Yuv Raj Bhattarai</h1>
-  <p>Associate Business Analyst | Systems & Requirements Specialist</p>
-  <button onclick="scrollToProjects()">View My Work</button>
-</section>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-  I am a Business Analyst passionate about transforming business needs into
-  structured system solutions. I specialize in requirement analysis,
-  process modeling, database design, and bridging the gap between
-  stakeholders and development teams.
-  </p>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-first" data-text="Yuv Raj">Yuv Raj</span>
+        <span class="hero-last" data-text="Bhattarai">Bhattarai</span>
+      </h1>
+      <p class="hero-title">Business Analyst</p>
+      <p class="hero-desc">
+        Translating business complexity into scalable solutions.<br/>
+        Finance · Healthcare · Hospitality · SaaS
+      </p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-deco">
+      <div class="deco-ring ring-1"></div>
+      <div class="deco-ring ring-2"></div>
+      <div class="deco-ring ring-3"></div>
+    </div>
+  </section>
 
-<section id="skills">
-<h2>Skills</h2>
+  <!-- ABOUT -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            Computing graduate with a deep curiosity for how systems, data, and people interact.
+          </p>
+          <p>
+            I'm a Business Analyst with hands-on experience in requirements analysis, system design, database planning, and UAT. I enjoy bridging the gap between what stakeholders envision and what development teams can build — turning ambiguous needs into precise, actionable documentation.
+          </p>
+          <p>
+            Currently working at <strong>Ageis Software Pvt Ltd</strong>, where I support OTA (Online Travel Agency) product development through Agile delivery cycles, stakeholder coordination, and scalable system design.
+          </p>
+          <div class="about-interests">
+            <span class="interest-tag">📊 Data Analysis</span>
+            <span class="interest-tag">🎸 Guitar</span>
+            <span class="interest-tag">📈 Stock Market</span>
+            <span class="interest-tag">🏏 Cricket</span>
+            <span class="interest-tag">✏️ Drawing & Editing</span>
+          </div>
+        </div>
+        <div class="about-info-cards">
+          <div class="info-card">
+            <span class="info-icon">📍</span>
+            <div>
+              <p class="info-label">Location</p>
+              <p class="info-value">Balkot-02, Bhaktapur, Nepal</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">🎓</span>
+            <div>
+              <p class="info-label">Education</p>
+              <p class="info-value">BSc (Hons) Computing<br/><small>London Metropolitan University</small></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">💼</span>
+            <div>
+              <p class="info-label">Experience</p>
+              <p class="info-value">1+ Year in Business Analysis</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">🎯</span>
+            <div>
+              <p class="info-label">Focus Areas</p>
+              <p class="info-value">Finance · Healthcare · SaaS · Hospitality</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="skills-grid">
-<div class="skill">Requirements Gathering</div>
-<div class="skill">Business Process Modeling</div>
-<div class="skill">SQL & Database Design</div>
-<div class="skill">UML Diagrams</div>
-<div class="skill">API Testing</div>
-<div class="skill">Agile / Scrum</div>
-<div class="skill">Excel & Data Analysis</div>
-<div class="skill">Technical Documentation</div>
-</div>
+  <!-- EXPERIENCE -->
+  <section class="experience section-pad dark-section" id="experience">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">02 — Experience</span>
+        <h2 class="section-title">Career Journey</h2>
+      </div>
+      <div class="timeline">
 
-</section>
+        <div class="timeline-item" data-index="0">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>Associate Business Analyst</h3>
+                <p class="company">Ageis Software Pvt Ltd · Lalitpur</p>
+              </div>
+              <span class="timeline-date">Dec 2025 – Present</span>
+            </div>
+            <ul class="card-points">
+              <li>Conducted market and competitor research to support travel feature planning and scope definition.</li>
+              <li>Gathered and analyzed business requirements from stakeholders; translated into functional specifications and user stories.</li>
+              <li>Designed and documented system workflows and database structures for scalable OTA operations.</li>
+              <li>Coordinated with designers, developers, QA, and stakeholders for accurate implementation.</li>
+              <li>Supported sprint planning, backlog prioritization, sprint reviews, and release planning within Agile delivery.</li>
+            </ul>
+            <div class="card-tags">
+              <span>Agile/Scrum</span><span>User Stories</span><span>System Design</span><span>OTA</span>
+            </div>
+          </div>
+        </div>
 
-<section id="projects">
+        <div class="timeline-item" data-index="1">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>Business Analyst Intern</h3>
+                <p class="company">Ageis Software Pvt Ltd · Lalitpur</p>
+              </div>
+              <span class="timeline-date">Jun 2025 – Dec 2025</span>
+            </div>
+            <ul class="card-points">
+              <li>Studied and documented existing ERP workflows and module interactions.</li>
+              <li>Analyzed interconnections among reservation, inventory, billing, and reporting modules.</li>
+              <li>Conducted requirement gathering for new ERP feature enhancements.</li>
+              <li>Collaborated with QA and development teams for validation and testing.</li>
+            </ul>
+            <div class="card-tags">
+              <span>ERP</span><span>Requirements Gathering</span><span>UAT</span><span>Documentation</span>
+            </div>
+          </div>
+        </div>
 
-<h2>Projects</h2>
+        <div class="timeline-item" data-index="2">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>UI/UX Intern</h3>
+                <p class="company">Aide Ascent Pvt Ltd · Kathmandu</p>
+              </div>
+              <span class="timeline-date">Aug 2024 – Nov 2024</span>
+            </div>
+            <ul class="card-points">
+              <li>Designed responsive wireframes and mockups using Figma based on user research and team feedback.</li>
+              <li>Worked on frontend development tasks and created responsive web pages.</li>
+              <li>Collaborated with frontend developers for implementation and iteration.</li>
+            </ul>
+            <div class="card-tags">
+              <span>Figma</span><span>Wireframing</span><span>UI/UX</span><span>Frontend</span>
+            </div>
+          </div>
+        </div>
 
-<div class="project">
+      </div>
+    </div>
+  </section>
 
-<h3>Signature Verification System</h3>
-<p>
-Developed a system for verifying signatures using machine learning techniques.
-Responsible for requirements documentation, UML diagrams and system planning.
-</p>
+  <!-- SKILLS -->
+  <section class="skills section-pad" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Skills</span>
+        <h2 class="section-title">Core Competencies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🧠</span> Business Analysis
+          </h3>
+          <div class="skill-pills">
+            <span class="pill">Requirements Gathering</span>
+            <span class="pill">Stakeholder Communication</span>
+            <span class="pill">Workflow & Process Modeling</span>
+            <span class="pill">Technical Documentation</span>
+            <span class="pill">User Acceptance Testing</span>
+            <span class="pill">System Planning & DB Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🛠️</span> Technical Skills
+          </h3>
+          <div class="skill-pills">
+            <span class="pill">Data Analysis</span>
+            <span class="pill">Microsoft Excel</span>
+            <span class="pill">Report Writing</span>
+            <span class="pill">Programming</span>
+            <span class="pill">UI/UX Design</span>
+            <span class="pill">Figma</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🤝</span> Soft Skills
+          </h3>
+          <div class="skill-pills">
+            <span class="pill">Cross-Functional Collaboration</span>
+            <span class="pill">Research & Problem Solving</span>
+            <span class="pill">Detail-Oriented Analysis</span>
+            <span class="pill">Quick Learner</span>
+            <span class="pill">Analytical Thinking</span>
+            <span class="pill">Attention to Detail</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- PROJECTS -->
+  <section class="projects section-pad dark-section" id="projects">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">04 — Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-index="0">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <h3>OpenBoard</h3>
+            <p class="project-subtitle">Verified College Review Platform</p>
+            <p class="project-desc">
+              Researched the higher education domain in Nepal and developed OpenBoard as a final year project — a platform for exploring colleges, posting reviews, and accessing academic resources.
+            </p>
+            <div class="project-tags">
+              <span>Research</span><span>Platform Design</span><span>Final Year Project</span><span>Nepal EdTech</span>
+            </div>
+          </div>
+          <div class="project-deco"></div>
+        </div>
+        <div class="project-card" data-index="1">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <h3>Capital Bikeshare</h3>
+            <p class="project-subtitle">Bike Rental Demand Prediction</p>
+            <p class="project-desc">
+              Researched the bike-sharing problem domain, collected and preprocessed relevant data, and developed a prediction model to forecast rental demand and support sustainable transport planning.
+            </p>
+            <div class="project-tags">
+              <span>Data Analysis</span><span>Prediction Model</span><span>Sustainable Transport</span><span>ML</span>
+            </div>
+          </div>
+          <div class="project-deco"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="project">
+  <!-- EDUCATION -->
+  <section class="education section-pad" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 — Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-year">2022–2025</div>
+          <div class="edu-info">
+            <h3>BSc (Hons) Computing</h3>
+            <p>London Metropolitan University</p>
+            <p class="edu-sub">Islington College, Kamalpokhari, Kathmandu</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2019–2021</div>
+          <div class="edu-info">
+            <h3>Higher Secondary (SLC/NEB)</h3>
+            <p>Liverpool International College</p>
+            <p class="edu-sub">New Baneshwor, Kathmandu</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2007–2010</div>
+          <div class="edu-info">
+            <h3>Primary School (SEE/NEB)</h3>
+            <p>Sant Nirankari Adarsh Vidya Mandir</p>
+            <p class="edu-sub">Tikapur, Kailali</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h3>Inventory Management System</h3>
-<p>
-Designed system workflows, database schema and user stories for an inventory
-tracking system to optimize product monitoring and reporting.
-</p>
+  <!-- CONTACT -->
+  <section class="contact section-pad dark-section" id="contact">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">06 — Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+      <div class="contact-content">
+        <p class="contact-desc">
+          Open to full-time roles, freelance projects, and collaborative opportunities in Finance, Healthcare, Hospitality, or SaaS.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:imyuvi022@gmail.com" class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-val">imyuvi022@gmail.com</p>
+            </div>
+          </a>
+          <a href="tel:+9779745401044" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <p class="contact-label">Phone</p>
+              <p class="contact-val">+977 9745401044</p>
+            </div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-val">View Profile →</p>
+            </div>
+          </a>
+        </div>
+        <a href="mailto:imyuvi022@gmail.com" class="btn-primary large">Send Me a Message</a>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Yuv Raj Bhattarai</p>
+      <p class="footer-copy">© 2025 — Business Analyst · Balkot, Bhaktapur, Nepal</p>
+    </div>
+  </footer>
 
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: yuvrb.tech@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/yuvraj</p>
-
-</section>
-
-<footer>
-<p>© 2026 Yuv Raj Bhattarai</p>
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
